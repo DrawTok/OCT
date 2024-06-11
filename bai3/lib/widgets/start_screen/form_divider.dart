@@ -1,5 +1,5 @@
+import 'package:bai3/theme/widgets/text_custom_theme.dart';
 import 'package:bai3/utils/constants/colors.dart';
-import 'package:bai3/utils/constants/font.dart';
 import 'package:bai3/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
 
@@ -15,9 +15,8 @@ class FormDivider extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: CustomSizes.md),
           child: Text(text,
-              style: decaRegular.copyWith(
-                  color: ThemeColors.black.withOpacity(0.6),
-                  fontSize: CustomSizes.fontSizeSm)),
+              style: TextCustomTheme.lightTextTheme.bodyLarge!.copyWith(
+                  color: ThemeColors.black.withOpacity(0.6))),
         ),
         const Expanded(child: Divider())
       ],

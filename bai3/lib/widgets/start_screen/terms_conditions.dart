@@ -1,9 +1,7 @@
+import 'package:bai3/theme/widgets/text_custom_theme.dart';
 import 'package:bai3/utils/constants/colors.dart';
-import 'package:bai3/utils/constants/font.dart';
 import 'package:flutter/material.dart';
 
-
-import '../../utils/constants/sizes.dart';
 
 class TermsConditions extends StatelessWidget {
   final bool isLogin;
@@ -15,21 +13,19 @@ class TermsConditions extends StatelessWidget {
     return Text.rich(
       TextSpan(
         text: isLogin ? '' : 'Khi tạo tài khoản, tức là bạn đã chấp nhận\n',
-        style: decaLight.copyWith(fontSize: CustomSizes.fontSizeXs),
+        style: TextCustomTheme.lightTextTheme.labelLarge,
         children: <TextSpan>[
           TextSpan(
             text: 'Điều khoản dịch vụ',
-            style: decaBold.copyWith(
-                fontSize: CustomSizes.fontSizeXs, color: ThemeColors.primary),
+            style: TextCustomTheme.lightTextTheme.labelLarge!.copyWith(
+                fontWeight: FontWeight.w800, color: ThemeColors.primary),
           ),
           TextSpan(
-              text: ' và ',
-              style: decaLight.copyWith(fontSize: CustomSizes.fontSizeXs)),
+              text: ' và ', style: TextCustomTheme.lightTextTheme.labelLarge),
           TextSpan(
-            text: 'Chính sách bảo mật',
-            style: decaBold.copyWith(
-                fontSize: CustomSizes.fontSizeXs, color: ThemeColors.primary),
-          ),
+              text: 'Chính sách bảo mật',
+              style: TextCustomTheme.lightTextTheme.labelLarge!.copyWith(
+                  fontWeight: FontWeight.w800, color: ThemeColors.primary)),
           if (!isLogin) const TextSpan(text: ' của chúng tôi'),
         ],
       ),

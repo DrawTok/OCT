@@ -1,10 +1,9 @@
+import 'package:bai3/theme/widgets/text_custom_theme.dart';
 import 'package:bai3/utils/constants/colors.dart';
-import 'package:bai3/utils/constants/font.dart';
 import 'package:bai3/utils/constants/sizes.dart';
 import 'package:bai3/widgets/app_style.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
-
 
 class CustomTextField extends StatelessWidget {
   final void Function(String) onChange;
@@ -35,20 +34,17 @@ class CustomTextField extends StatelessWidget {
             ? Text.rich(TextSpan(children: [
                 TextSpan(
                     text: label,
-                    style:
-                        decaLight.copyWith(fontSize: CustomSizes.fontSizeSm)),
+                    style: TextCustomTheme.lightTextTheme.bodyMedium),
                 TextSpan(
                     text: '*',
-                    style: decaLight.copyWith(
-                        fontSize: CustomSizes.fontSizeSm,
-                        color: ThemeColors.error))
+                    style: TextCustomTheme.lightTextTheme.bodyMedium!
+                        .copyWith(color: ThemeColors.error))
               ]))
             : const SizedBox(),
         const SizedBox(height: CustomSizes.spaceInputLabel),
         TextFormField(
-            textInputAction: isLastField
-                ? TextInputAction.done
-                : TextInputAction.next,
+            textInputAction:
+                isLastField ? TextInputAction.done : TextInputAction.next,
             autovalidateMode: AutovalidateMode.onUserInteraction,
             onChanged: onChange,
             validator: onValidator,

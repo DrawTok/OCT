@@ -1,4 +1,4 @@
-import 'package:bai3/utils/constants/font.dart';
+import 'package:bai3/theme/widgets/text_custom_theme.dart';
 import 'package:bai3/utils/constants/sizes.dart';
 import 'package:bai3/utils/devices/device_utility.dart';
 import 'package:bai3/utils/helper/helper_function.dart';
@@ -34,7 +34,8 @@ class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
                 ? Theme.of(context).scaffoldBackgroundColor
                 : Colors.transparent),
         title: Text(title,
-            style: decaBold.copyWith(fontSize: CustomSizes.fontSizeXl)),
+            style: TextCustomTheme.lightTextTheme.headlineMedium!
+                .copyWith(fontWeight: FontWeight.w800)),
         centerTitle: true,
         actions: actions,
         automaticallyImplyLeading: false,

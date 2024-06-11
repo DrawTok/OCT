@@ -71,5 +71,7 @@
   "incorrect_account_or_password": "Tài khoản hoặc mật khẩu không chính xác",
   "expired_code": "Mã xác thực đã hết hạn",
   "invalid_code": "Mã xác thực không hợp lệ hoặc đã được sử dụng",
-  "change_password_success": "Thay đổi mật khẩu thành công"
+  "change_password_success": "Thay đổi mật khẩu thành công",
+  "message_home": "Bạn muốn làm gì hôm nay?",
+  "tooltip_home": "Nhấn vào + để thêm nhiệm vụ của bạn"
 }

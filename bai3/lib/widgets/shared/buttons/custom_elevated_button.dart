@@ -1,8 +1,7 @@
+import 'package:bai3/theme/widgets/text_custom_theme.dart';
 import 'package:bai3/utils/constants/colors.dart';
-import 'package:bai3/utils/constants/font.dart';
 import 'package:bai3/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
-
 
 class CustomElevatedButton extends StatelessWidget {
   final Widget? widget;
@@ -39,10 +38,15 @@ class CustomElevatedButton extends StatelessWidget {
                   children: [
                     widget!,
                     const SizedBox(width: CustomSizes.sm),
-                    Text(label, style: decaBold.copyWith(color: textColor))
+                    Text(label,
+                        style: TextCustomTheme.lightTextTheme.bodyLarge!
+                            .copyWith(
+                                color: textColor, fontWeight: FontWeight.w800))
                   ],
                 )
-              : Text(label, style: decaBold.copyWith(color: textColor))),
+              : Text(label,
+                  style: TextCustomTheme.lightTextTheme.bodyLarge!.copyWith(
+                      color: textColor, fontWeight: FontWeight.w800))),
     );
   }
 }

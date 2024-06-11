@@ -70,6 +70,8 @@
   "incorrect_account_or_password": "Account or password is incorrect",
   "expired_code": "The authentication code has expired",
   "invalid_code": "The authentication code is invalid or used",
-  "change_password_success": "Change the password successfully"
+  "change_password_success": "Change the password successfully",
+  "message_home": "What do you want to do today?",
+  "tooltip_home": "Tap + to add your tasks"
 
 }

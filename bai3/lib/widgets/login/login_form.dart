@@ -1,8 +1,8 @@
 
 import 'package:bai3/controllers/signin_controller.dart';
 import 'package:bai3/shared/input/custom_textfield.dart';
+import 'package:bai3/theme/widgets/text_custom_theme.dart';
 import 'package:bai3/utils/constants/colors.dart';
-import 'package:bai3/utils/constants/font.dart';
 import 'package:bai3/utils/constants/sizes.dart';
 import 'package:bai3/widgets/shared/buttons/custom_elevated_button.dart';
 import 'package:bai3/widgets/start_screen/form_divider.dart';
@@ -47,9 +47,8 @@ class SignInForm extends GetView<SignInController> {
               onTap: controller.onForgot,
               child: Text(
                 'forgot_password'.tr,
-                style: decaSemiBold.copyWith(
-                    color: ThemeColors.primary,
-                    fontSize: CustomSizes.fontSizeSm),
+                style: TextCustomTheme.lightTextTheme.bodyLarge!.copyWith(
+                    color: ThemeColors.primary),
               ),
             ),
           ),

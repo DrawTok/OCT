@@ -1,10 +1,8 @@
-
+import 'package:bai3/theme/widgets/text_custom_theme.dart';
 import 'package:bai3/utils/constants/colors.dart';
 import 'package:bai3/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
-import '../constants/font.dart';
 
 class HelperFunctions {
   static void navigateToScreen(BuildContext context, Widget screen) {
@@ -34,8 +32,6 @@ class HelperFunctions {
     return color;
   }
 
-
-
   static void showSnackBar(String message, {bool isError = true}) {
     ScaffoldMessenger.of(Get.context!).showSnackBar(SnackBar(
         dismissDirection: DismissDirection.horizontal,
@@ -45,7 +41,8 @@ class HelperFunctions {
         behavior: SnackBarBehavior.floating,
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(CustomSizes.borderRadiusSm)),
-        content:
-            Text(message, style: decaMedium.copyWith(color: Colors.white))));
+        content: Text(message,
+            style: TextCustomTheme.lightTextTheme.bodyLarge!
+                .copyWith(color: Colors.white))));
   }
 }

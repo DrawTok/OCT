@@ -1,3 +1,4 @@
+import 'package:bai3/bottom_bar.dart';
 import 'package:bai3/controllers/auth_reset_controller.dart';
 import 'package:bai3/controllers/signin_controller.dart';
 import 'package:bai3/controllers/signup_controller.dart';
@@ -10,7 +11,7 @@ import 'package:get/get.dart';
 class Routes {
   static const initial = '/';
   static const onBoarding = "/onBoarding";
-  static const home = "/home";
+  static const main = "/main";
   static const signIn = '/signIn';
   static const signUp = '/signUp';
   static const forgot = "/forgot";
@@ -35,5 +36,6 @@ class Routes {
         binding: BindingsBuilder(() {
           Get.lazyPut(() => AuthResetController());
         })),
+    GetPage(name: main, page: () => const BottomBar())
   ];
 }

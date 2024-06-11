@@ -18,7 +18,7 @@ class CustomSizes {
   static const double fontSizeMd = 16.0;
   static const double fontSizeLg = 18.0;
   static const double fontSizeXl = 24.0;
-  static const double fontSizeXxl = 24.0;
+  static const double fontSizeXxl = 32.0;
 
   // Button sizes
   static const double buttonHeight = 18.0;
